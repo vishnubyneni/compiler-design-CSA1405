@@ -34,3 +34,4 @@
        printf("\n A->%s",modifiedGram);  
       printf("\n X->%s\n",newGram);  
   }
+
