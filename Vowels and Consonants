@@ -16,3 +16,4 @@ int main()
 	printf("Number of consonants are: %d\n", const_count);
 	return 0;
 }
+
