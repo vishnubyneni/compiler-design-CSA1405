@@ -1,4 +1,3 @@
-%{
 #include<stdio.h>
 int ln=0;
 %}
