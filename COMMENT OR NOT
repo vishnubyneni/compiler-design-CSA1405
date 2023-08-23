@@ -15,3 +15,4 @@ yylex();
 printf("\nno of comments:%d",c);
 return 0;
 }
+
