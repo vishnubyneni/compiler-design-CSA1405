@@ -14,3 +14,4 @@ yyout=fopen("out.txt","w");
 yylex();
 return 0;
 }
+
