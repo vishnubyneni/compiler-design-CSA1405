@@ -52,3 +52,4 @@ while((ch = fgetc(fp)) != EOF){
 fclose(fp);
 return 0;
 }
+
