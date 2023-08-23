@@ -1,0 +1,21 @@
+%{
+#include<stdio.h>
+%}
+
+%%
+[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}  { printf("%s is a valid email\n", yytext); }
+.*                                           { printf("'%s' is not a valid email\n", yytext); }
+%%
+
+int main()
+{
+    printf("Enter the email: ");
+    yylex();
+    return 0;
+}
+
+int yywrap()
+{
+    return 1;
+}
+
