@@ -1,27 +1,25 @@
-#include <stdio.h>
-#include <string.h>
+%{
+#include<stdio.h>
+int lc=0,sc=0,ch=0,wc=0;        
+%}
 
-int main() {
-    char com[30];
-    int i;
 
-    printf("Enter comment: ");
-    gets(com);
+%%
+[\n] { lc++; ch+=yyleng;}
+[  \t] { sc++; ch+=yyleng;}
+[^\t\n ]+ { wc++;  ch+=yyleng;} 
+%%
 
-    if (com[0] == '/') {
-        if (com[1] == '/') {
-            printf("It is a comment");
-        } else if (com[1] == '*' && strstr(com, "*/")) {
-            printf("It is a comment");
-        } else {
-            printf("It is not a comment");
-        }
-    } else {
-        printf("It is not a comment");
-    }
+int yywrap()
+{ return 1;    }
 
+int main(){
+    printf("Enter the Sentence : ");
+    yylex();
+    printf("Number of lines,words,char are :%d  %d  %d\n",lc,wc,ch);
     return 0;
 }
+
 
 
 
