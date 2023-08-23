@@ -19,3 +19,4 @@ int main(){
     printf("Number of lines,words,char are :%d  %d  %d\n",lc,wc,ch);
     return 0;
 }
+
