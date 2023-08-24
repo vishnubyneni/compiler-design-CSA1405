@@ -21,3 +21,4 @@ printf ("number of positive numbers = %d,"
                 positive_no, negative_no);
 return 0; 
 }
+
