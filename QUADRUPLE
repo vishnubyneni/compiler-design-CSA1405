@@ -56,3 +56,4 @@ int main()
 	printf("\n:=\tt%d\t\t%c",t-1,line[0]);
 	getch();
 }
+
